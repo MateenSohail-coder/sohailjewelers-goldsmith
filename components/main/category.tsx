@@ -36,7 +36,7 @@ const Categories: Category[] = [
   {
     id: "bracelets",
     name: "Bracelets",
-    image: "/bracelets.jpg",
+    image: "/Bracelets.jpg",
     description:
       "Wrap your wrist in luxury with our diverse bracelet collection — from delicate chains to statement cuffs, each crafted with precision and a touch of sophistication.",
   },
@@ -47,14 +47,13 @@ const Categories: Category[] = [
     description:
       "Complete your look with our curated jewelry sets, designed for a cohesive expression of luxury. Each set radiates harmony, elegance, and impeccable craftsmanship.",
   },
- {
-  id: "custom-pieces",
-  name: "custom-pieces",
-  image: "/custom.jpg",
-  description:
-    "Transform your vision into reality with our bespoke jewelry service. From engagement rings to heirloom sets, each piece is handcrafted to your style, story, and personality. Our master goldsmiths blend tradition with innovation to create timeless designs that are truly one-of-a-kind — made exclusively for you.",
-}
-
+  {
+    id: "custom-pieces",
+    name: "custom-pieces",
+    image: "/custom.jpg",
+    description:
+      "Transform your vision into reality with our bespoke jewelry service. From engagement rings to heirloom sets, each piece is handcrafted to your style, story, and personality. Our master goldsmiths blend tradition with innovation to create timeless designs that are truly one-of-a-kind — made exclusively for you.",
+  },
 ];
 
 const CategoryPage: React.FC = () => {
