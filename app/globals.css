@@ -1,5 +1,28 @@
 @import "tailwindcss";
 
+/* Font Face Declarations */
+@font-face {
+  font-family: 'Huntesla-Gloficka';
+  src: url('/fonts/Huntesla-Gloficka.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+font-family: 'Sunscreen';
+src: url('/fonts/Sunscreen.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Varuna';
+  src: url('/fonts/varuna.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -23,4 +46,70 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+.blur-hero {
+  filter: blur(4px);
+}
+.font-huntesla {
+  font-family: 'Huntesla-Gloficka', sans-serif;
+}
+.font-sunscreen {
+  font-family: 'Sunscreen', sans-serif;
+}
+.font-varuna {  
+  font-family: 'Varuna', serif;
+}
+/* Hide scrollbar by default */
+body::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+  transition: all 0.3s ease;
+  opacity: 0;
+}
+
+/* Show scrollbar thumb only on hover */
+/* Hide scrollbar by default */
+bodybody::-webkit-scrollbar {
+  width: 8px;
+  background: transparent;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+/* Show scrollbar only when hovering over the page */
+html:hover::-webkit-scrollbar {
+  opacity: 1;
+}
+
+/* No scrollbar track background */
+body::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Gold scrollbar thumb */
+body::-webkit-scrollbar-thumb {
+  background: rgba(243, 198, 35, 0.8); /* gold */
+  border-radius: 10px;
+  border: none;
+}
+
+/* Hover effect for thumb */
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(243, 198, 35, 1);
+}
+
+/* Remove scrollbar arrows */
+body::-webkit-scrollbar-button {
+  display: none;
+}
+
+/* Firefox Support */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  transition: all 0.4s ease;
+}
+
+html:hover {
+  scrollbar-color: rgba(243, 198, 35, 0.8) transparent;
 }
