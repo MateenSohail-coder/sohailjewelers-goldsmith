@@ -40,7 +40,7 @@ export default function Location() {
 
   return (
     <section
-      id="location"
+      id="address"
       className="bg-[#0B1E3A] text-[#FDF6E3] py-16 px-6 text-center"
     >
       <motion.h2

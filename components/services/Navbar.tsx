@@ -14,6 +14,7 @@ const navLinks = [
   { href: "#testimals", label: "Testimonials" },
   { href: "#faqs", label: "FAQs" },
   { href: "#contact", label: "Contact" },
+  { href: "#address", label: "Address" },
 ];
 
 export default function Navbar() {
