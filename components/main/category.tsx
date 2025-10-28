@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { motion, Variants } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 interface Category {
   id: string;
@@ -49,7 +50,7 @@ const Categories: Category[] = [
   },
   {
     id: "custom-pieces",
-    name: "custom-pieces",
+    name: "Custom Pieces",
     image: "/custom.jpg",
     description:
       "Transform your vision into reality with our bespoke jewelry service. From engagement rings to heirloom sets, each piece is handcrafted to your style, story, and personality. Our master goldsmiths blend tradition with innovation to create timeless designs that are truly one-of-a-kind — made exclusively for you.",
@@ -57,20 +58,6 @@ const Categories: Category[] = [
 ];
 
 const CategoryPage: React.FC = () => {
-  const [filters, setFilters] = useState({
-    metal: "",
-    gemstone: "",
-    occasion: "",
-  });
-
-  const handleFilterChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    setFilters({
-      ...filters,
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  // Framer Motion Variants
   const fadeUp: Variants = {
     hidden: { opacity: 0, y: 40 },
     visible: {
@@ -88,67 +75,111 @@ const CategoryPage: React.FC = () => {
   };
 
   return (
-    <section id="category"  className="min-h-screen bg-gradient-to-b from-[#FDF6E3] to-[#FAF3DD] py-20 px-6">
+    <section
+      id="category"
+      className="min-h-screen bg-gradient-to-b from-[#FDF6E3] to-[#FAF3DD] py-20 px-6"
+    >
       <motion.div
         initial="hidden"
         animate="visible"
         variants={container}
         className="max-w-7xl mx-auto"
       >
-        {/* Heading */}
+        {/* 🌟 Signature Bangles Section FIRST */}
+        <motion.div
+          variants={fadeUp}
+          className="relative overflow-hidden rounded-3xl shadow-[0_10px_50px_rgba(243,198,35,0.4)] border border-[#F3C623]/50 mb-24"
+        >
+          <div className="relative h-[550px] w-full md:h-[600px]">
+            <Image
+              src="/bangle.jpg"
+              alt="Signature Bangles"
+              fill
+              className="object-cover object-center opacity-90"
+              priority
+            />
+
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#0B1E3A]/85 via-[#10375C]/50 to-transparent" />
+          </div>
+
+          {/* Text Content */}
+          <div className="absolute inset-0 flex flex-col justify-center px-6 sm:px-12 md:px-20 lg:px-32 text-left">
+            <motion.h2
+              variants={fadeUp}
+              className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold text-[#F3C623] mb-5 drop-shadow-lg"
+            >
+              Our Signature Collection – Bangles
+            </motion.h2>
+            <motion.p
+              variants={fadeUp}
+              className="max-w-2xl text-base sm:text-lg md:text-xl leading-relaxed text-[#FFF9E3] font-serif"
+            >
+              Experience the artistry and precision that define our bangles —
+              where timeless tradition meets modern craftsmanship. Each piece is
+              meticulously handcrafted to perfection, symbolizing our passion
+              and expertise in creating bangles that speak of elegance,
+              strength, and individuality.
+            </motion.p>
+            <Link href="/categories/bangles">
+              <motion.button
+                variants={fadeUp}
+                whileHover={{ scale: 1.05 }}
+                className="mt-8 w-fit px-8 py-4 bg-[#F3C623] text-[#0B1E3A] font-semibold rounded-full shadow-[0_0_20px_rgba(243,198,35,0.5)] hover:shadow-[0_0_30px_rgba(243,198,35,0.8)] transition-all duration-500"
+              >
+                Explore Signature Bangles
+              </motion.button>
+            </Link>
+          </div>
+        </motion.div>
+
+        {/* Heading for Rest of Categories */}
         <motion.h1
           variants={fadeUp}
           className="text-5xl md:text-6xl font-sunscreen text-center font-bold text-[#10375C] mb-12"
         >
-          Explore the categories
+          Explore Our Categories
         </motion.h1>
-
-    
 
         {/* Categories Grid */}
         <motion.div
           variants={container}
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
         >
-        {Categories.map((category) => (
-  <motion.div
-    key={category.id}
-    variants={fadeUp}
-    whileHover={{ y: -8, scale: 1.02 }}
-    transition={{ type: "spring", stiffness: 180, damping: 14 }}
-    className="group relative bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden border border-[#F3C623]/40 shadow-[0_6px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_10px_30px_rgba(243,198,35,0.3)] transition-all duration-500"
-  >
-    {/* Image Container */}
-    <div className="relative w-full h-72 overflow-hidden">
-      <Image
-        src={category.image}
-        alt={category.name}
-        fill
-        className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-      />
+          {Categories.map((category) => (
+            <motion.div
+              key={category.id}
+              variants={fadeUp}
+              whileHover={{ y: -8, scale: 1.02 }}
+              transition={{ type: "spring", stiffness: 180, damping: 14 }}
+              className="group relative bg-white/90 backdrop-blur-md rounded-3xl overflow-hidden border border-[#F3C623]/40 shadow-[0_6px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_10px_30px_rgba(243,198,35,0.3)] transition-all duration-500"
+            >
+              {/* Image */}
+              <div className="relative w-full h-72 overflow-hidden">
+                <Image
+                  src={category.image}
+                  alt={category.name}
+                  fill
+                  className="object-cover transform group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3A]/70 via-[#0B1E3A]/30 to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-500" />
+                <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#F3C623]/80 rounded-3xl transition-all duration-700 ease-out" />
+              </div>
 
-      {/* Overlay Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#0B1E3A]/70 via-[#0B1E3A]/30 to-transparent opacity-70 group-hover:opacity-80 transition-opacity duration-500" />
+              {/* Text */}
+              <div className="relative z-10 p-7 text-center bg-gradient-to-b from-white/90 to-[#FFF9E3]/80">
+                <h2 className="text-2xl font-serif font-semibold text-[#10375C] mb-3 tracking-wide group-hover:text-[#0B1E3A] transition-colors duration-300">
+                  {category.name}
+                </h2>
+                <p className="text-[#5B3A00]/90 text-[15px] leading-relaxed font-serif max-w-md mx-auto">
+                  {category.description}
+                </p>
+              </div>
 
-      {/* Gold Glow Frame */}
-      <div className="absolute inset-0 border-2 border-transparent group-hover:border-[#F3C623]/80 rounded-3xl transition-all duration-700 ease-out" />
-    </div>
-
-    {/* Content */}
-    <div className="relative z-10 p-7 text-center bg-gradient-to-b from-white/90 to-[#FFF9E3]/80">
-      <h2 className="text-2xl font-serif font-semibold text-[#10375C] mb-3 tracking-wide group-hover:text-[#0B1E3A] transition-colors duration-300">
-        {category.name}
-      </h2>
-      <p className="text-[#5B3A00]/90 text-[15px] leading-relaxed font-serif max-w-md mx-auto">
-        {category.description}
-      </p>
-    </div>
-
-    {/* Subtle Shine Effect */}
-    <div className="absolute -top-10 left-1/2 w-40 h-40 bg-[#F3C623]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-40 transition-all duration-700 ease-out" />
-  </motion.div>
-))}
-
+              {/* Glow */}
+              <div className="absolute -top-10 left-1/2 w-40 h-40 bg-[#F3C623]/30 rounded-full blur-3xl opacity-0 group-hover:opacity-40 transition-all duration-700 ease-out" />
+            </motion.div>
+          ))}
         </motion.div>
       </motion.div>
     </section>

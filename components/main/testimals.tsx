@@ -16,7 +16,7 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    name: "Ahmad Gujjar",
+    name: "Customer",
     role: "Milk Seller",
     quote:
       "The custom engagement ring they created for me exceeded all my expectations. The attention to detail and craftsmanship is unparalleled. The entire process was seamless and personal — I felt truly heard and cared for.",
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 2,
-    name: "Madam Naheed",
+    name: "Customer",
     role: "Teacher",
     quote:
       "I commissioned a personalized necklace for my wife’s anniversary — the result was breathtaking. The design team turned my rough sketch into a masterpiece that captured everything I imagined.",
@@ -35,8 +35,18 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 3,
-    name: "Madam Shahida",
+    name: "Customer",
     role: "Teacher",
+    quote:
+      "As someone who values fine artistry, I was blown away by their bracelet collection. Every detail, from gemstone selection to polish, reflects true craftsmanship and passion.",
+    image:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=400&q=80",
+    rating: 5,
+  },
+  {
+    id: 4,
+    name: "Customer",
+    role: "Designer",
     quote:
       "As someone who values fine artistry, I was blown away by their bracelet collection. Every detail, from gemstone selection to polish, reflects true craftsmanship and passion.",
     image:
