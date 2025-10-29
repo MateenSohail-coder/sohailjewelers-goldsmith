@@ -121,7 +121,7 @@ const CategoryPage: React.FC = () => {
               and expertise in creating bangles that speak of elegance,
               strength, and individuality.
             </motion.p>
-            <Link href="/categories/bangles">
+            <Link href="/categories">
               <motion.button
                 variants={fadeUp}
                 whileHover={{ scale: 1.05 }}
