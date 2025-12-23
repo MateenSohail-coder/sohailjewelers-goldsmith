@@ -1,7 +1,15 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { MapPin, Clock, Phone, X, CardSimIcon, IdCardIcon } from "lucide-react";
+import {
+  MapPin,
+  Clock,
+  Phone,
+  X,
+  CardSimIcon,
+  IdCardIcon,
+  LocateIcon,
+} from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -90,13 +98,13 @@ export default function Location() {
         {/* Buttons */}
         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-6">
           <motion.a
-            href="https://maps.app.goo.gl/yPh6tQXh3ujhcTfTA"
+            href="https://maps.app.goo.gl/xQfiBhzW59V8af1f7"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-6 py-3 rounded-full bg-[#F3C623] text-[#0B1E3A] font-semibold text-lg hover:bg-[#FFD966] transition-all duration-300 shadow-lg"
+            className="inline-block px-6 py-3 flex items-center justify-center rounded-full bg-[#F3C623] text-[#0B1E3A] font-semibold text-lg hover:bg-[#FFD966] transition-all duration-300 shadow-lg"
             whileHover={{ scale: 1.05 }}
           >
-            Open in Google Maps
+            <p>Open in Google Maps</p>
           </motion.a>
 
           {/* NEW BUTTON */}

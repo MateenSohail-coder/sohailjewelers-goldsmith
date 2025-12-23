@@ -131,7 +131,7 @@ export default function About() {
             className="relative rounded-2xl shadow-2xl border-4 border-[#F3C623] overflow-hidden group"
           >
             <Image
-              src="/about.jpg"
+              src="/AboutUs.avif"
               alt="Cozy artisan workshop with goldsmith tools and jewelry pieces"
               width={600}
               height={400}

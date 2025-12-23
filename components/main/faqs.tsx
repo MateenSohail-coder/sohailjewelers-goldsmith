@@ -116,7 +116,7 @@ const FAQs: React.FC = () => {
                 onClick={() => toggleFAQ(faq.id)}
                 className="w-full px-10 py-10 text-left flex justify-between items-center hover:bg-[#F3C623]/10 transition-colors duration-300"
               >
-                <h3 className="text-3xl font-varuna md:text-4xl font-semibold text-[#10375C] pr-6">
+                <h3 className="sm:text-2xl text-xl font-varuna md:text-4xl font-semibold text-[#10375C] pr-6">
                   {faq.question}
                 </h3>
                 <motion.span
