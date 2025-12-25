@@ -40,13 +40,6 @@ const processSteps: ProcessStep[] = [
       "Every jewelry piece undergoes rigorous inspection and polishing to ensure it meets our highest standards of craftsmanship.",
     Icon: ShieldCheck,
   },
-  {
-    id: 5,
-    title: "Secure Delivery",
-    description:
-      "Your masterpiece is carefully packaged and shipped with full insurance and tracking, arriving safely at your doorstep.",
-    Icon: Package,
-  },
 ];
 
 const fadeUp: Variants = {
@@ -112,7 +105,7 @@ const Process: React.FC = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.1 }}
           variants={staggerContainer}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 relative"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 relative"
         >
           {processSteps.map((step, index) => (
             <motion.div

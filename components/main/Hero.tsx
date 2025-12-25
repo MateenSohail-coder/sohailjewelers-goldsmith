@@ -43,7 +43,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
-          className="text-4xl sm:text-5xl lg:text-7xl font-huntesla font-bold mb-6 leading-tight text-[#FDF6E3] drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
+          className="text-4xl sm:text-5xl lg:text-7xl font-sunscreen font-bold mb-6 leading-tight text-[#FDF6E3] drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]"
         >
           Craft Your Unique Jewelry with{" "}
           <span className="text-[#F3C623]">Artistry</span> and{" "}
@@ -56,7 +56,8 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
           className="text-lg sm:text-xl mb-10 max-w-2xl mx-auto text-[#FAF0E6]"
         >
-          Discover the elegance of custom-made luxury jewelry, designed just for you.
+          Discover the elegance of custom-made luxury jewelry, designed just for
+          you.
         </motion.p>
 
         {/* CTA Buttons */}
@@ -80,7 +81,7 @@ export default function Hero() {
             onClick={() => handleScroll("#category")} // 👈 scrolls to Category section
             className="bg-[#F3C623] hover:bg-[#EB8317] text-[#10375C] font-semibold py-4 px-10 rounded-full text-lg shadow-lg hover:shadow-xl transition duration-300"
           >
-            Customize Your Jewelry
+            Customize Your Gold Jewelry
           </motion.button>
 
           <motion.button

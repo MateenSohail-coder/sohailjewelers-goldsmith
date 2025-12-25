@@ -18,34 +18,34 @@ const Bangles: Bangle[] = [
   {
     id: "b1",
     name: "Royal Filigree Bangle",
-    image: "/bangles/b1.jpg",
+    image: "/bangle1.jpeg",
     weight: "22g",
     goldQuality: "22K Gold",
-    link: "/products/b1",
+    link: "#",
   },
   {
     id: "b2",
     name: "Eternal Twist Bangle",
-    image: "/bangles/b2.jpg",
+    image: "/bangle2.jpg",
     weight: "25g",
-    goldQuality: "24K Gold",
-    link: "/products/b2",
+    goldQuality: "22K Gold",
+    link: "#",
   },
   {
     id: "b3",
     name: "Lotus Heritage Bangle",
-    image: "/bangles/b3.jpg",
+    image: "/bangle3.jpg",
     weight: "18g",
     goldQuality: "22K Gold",
-    link: "/products/b3",
+    link: "#",
   },
   {
     id: "b4",
     name: "Majestic Curve Bangle",
-    image: "/bangles/b4.jpg",
+    image: "/bangle4.webp",
     weight: "20g",
     goldQuality: "22K Gold",
-    link: "/products/b4",
+    link: "#",
   },
 ];
 
@@ -146,7 +146,7 @@ const CategoryPage: React.FC = () => {
                     {bangle.name}
                   </h4>
                   <p className="text-sm text-[#5B3A00]/80">
-                    {bangle.goldQuality} • {bangle.weight}
+                    {bangle.goldQuality}
                   </p>
                 </div>
               </motion.div>
@@ -181,15 +181,6 @@ const CategoryPage: React.FC = () => {
               <p className="text-[#5B3A00]/90 mb-1">
                 <strong>Gold Quality:</strong> {selectedBangle.goldQuality}
               </p>
-              <p className="text-[#5B3A00]/90 mb-6">
-                <strong>Weight:</strong> {selectedBangle.weight}
-              </p>
-              <a
-                href={selectedBangle.link}
-                className="inline-block w-full text-center bg-[#F3C623] text-[#0B1E3A] py-3 rounded-full font-semibold shadow-md hover:shadow-[0_0_20px_rgba(243,198,35,0.6)] transition-all duration-300"
-              >
-                Shop Now
-              </a>
 
               <button
                 onClick={() => setSelectedBangle(null)}
